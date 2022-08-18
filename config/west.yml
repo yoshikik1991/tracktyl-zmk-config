@@ -1,11 +1,13 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: slicemk
+      url-base: https://github.com/slicemk
+    - name: luberry
+      url-base: https://github.com/luberry
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: luberry
+      revision: pmw3389
       import: app/west.yml
   self:
     path: config
