@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmk
-      revision: charybdis-with-trackball
+      revision: trackball-support
       import: app/west.yml
   self:
     path: config
