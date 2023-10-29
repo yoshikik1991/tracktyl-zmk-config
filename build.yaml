@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: tracktyl_left
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: tracktyl_right
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: settings_reset
