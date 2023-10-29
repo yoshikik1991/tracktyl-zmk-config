@@ -19,9 +19,9 @@
 &xiao_spi {
     status = "okay";
 
-    // miso-pin = <46>; // P1.14  14 + 32 = 46
-    // mosi-pin = <47>; // P1.15  15 + 32 = 47
-    // sck-pin = <45>; // P1.13   13 + 32 = 45
+    miso-pin = <14>; // P1.14  14 + 32 = 46
+    mosi-pin = <15>; // P1.15  15 + 32 = 47
+    sck-pin = <13>; // P1.13   13 + 32 = 45
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>; // P1.12
 
     trackball: trackball@0 {
