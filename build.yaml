@@ -17,5 +17,4 @@ include:
     shield: tracktyl_left
   - board: seeeduino_xiao_ble
     shield: tracktyl_right
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+
