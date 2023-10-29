@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmk
-      revision: dracula-test
+      revision: charybdis-with-trackball
       import: app/west.yml
   self:
     path: config
