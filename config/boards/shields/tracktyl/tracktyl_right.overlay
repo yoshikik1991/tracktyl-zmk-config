@@ -16,7 +16,7 @@
             ;
 };
 
-&spi0 {
+&xiao_spi {
     status = "okay";
 
     miso-pin = <46>; // P1.14  14 + 32 = 46
