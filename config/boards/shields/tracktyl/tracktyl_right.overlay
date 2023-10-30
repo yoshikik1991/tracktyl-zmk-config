@@ -19,16 +19,16 @@
 &xiao_spi {
     status = "okay";
 
-    miso-pin = <46>; // P1.14  14 + 32 = 46
-    mosi-pin = <47>; // P1.15  15 + 32 = 47
-    sck-pin = <45>; // P1.13   13 + 32 = 45
-    cs-gpios = <&xiao_d 4 GPIO_ACTIVE_LOW>; // P1.12
+    miso-pin = <3>; // P1.14  14 + 32 = 46
+    mosi-pin = <2>; // P1.15  15 + 32 = 47
+    sck-pin = <28>; // P1.13   13 + 32 = 45
+    cs-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>; // P1.12
 
     trackball: trackball@0 {
         compatible = "pixart,pmw3360";
         reg = <0>;
         label = "Pixart PMW3360";
-        irq-gpios = <&xiao_d 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <2000000>;
         // scroll-layer = <5>;
     };
