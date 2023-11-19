@@ -5,20 +5,19 @@
 };
 
 &kscan0 {
-        col-gpios
-            = <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+		row-gpios
+            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-
-        row-gpios
-            = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
+   	col-gpios
+        = <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        ;
 };
 
 /*
@@ -44,18 +43,17 @@
 */
 
 &pro_micro_spi {
-    status = "okay";
-
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // P0.20
-    sck-pin = <22>; // P0.22
-    cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
+  status = "okay";
+  sck-pin = <45>;
+  mosi-pin = <10>;
+  miso-pin = <43>; 
+  cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
-        compatible = "pixart,pmw3360";
+        compatible = "pixart,pmw33xx";
         reg = <0>;
-        label = "Pixart PMW3360";
-        irq-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        //label = "Pixart PMW3360";
+        //irq-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <2000000>;
         scroll-layer = <5>;
     };
