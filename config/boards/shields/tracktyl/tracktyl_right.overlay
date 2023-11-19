@@ -48,6 +48,7 @@
   mosi-pin = <10>;
   miso-pin = <43>; 
   cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+status = "okay";
 
     trackball: trackball@0 {
         compatible = "pixart,pmw33xx";
